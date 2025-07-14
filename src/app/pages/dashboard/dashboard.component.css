@@ -1,0 +1,119 @@
+
+.painel-geral {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Ford', sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.area-de-trabalho {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.topo-da-pagina {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #dfe6e9;
+}
+
+.titulo-pagina {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.saudacao p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+.bloco-inicial {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.caixa-de-escolha {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.titulo-caixa {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.lista-modelos {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.lista-modelos:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.mostrador-dados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.apresentacao-veiculo {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  display: flexbox;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.nome-do-modelo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.espaco-foto {
+  text-align: center;
+}
+
+.imagem-destaque {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.area-tabela-info {
+  margin-top: 2rem;
+  grid-column: 1 / -1; /* Tabela ocupa a largura total */
+}
+
+@media (max-width: 992px) {
+  .bloco-inicial, .apresentacao-veiculo {
+    grid-template-columns: 1fr;
+  }
+}

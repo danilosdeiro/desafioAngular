@@ -1,0 +1,38 @@
+/* Plano de fundo geral */
+body, .home-container {
+  background: linear-gradient(135deg, #1f2937, #2c3e50);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 2rem;
+  font-family: 'Ford', sans-serif;
+}
+
+.welcome-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 500px;
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.welcome-card span {
+  color: #0d6efd;
+}
+
+.car-image-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.car-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}

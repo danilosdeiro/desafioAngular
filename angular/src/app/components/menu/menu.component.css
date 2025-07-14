@@ -1,0 +1,123 @@
+.modern-navbar {
+  background: #1c2833; 
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Ford', sans-serif;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Ford', sans-serif;
+}
+
+.menu-toggle {
+  background: #3498db;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Ford', sans-serif;
+}
+
+.menu-toggle:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  font-family: 'Ford', sans-serif;
+}
+
+.logout-btn {
+  background: #e74c3c;
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-family: 'Ford', sans-serif;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  font-family: 'Ford', sans-serif;
+}
+
+.modern-sidebar {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  font-family: 'Ford', sans-serif;
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: 'Ford', sans-serif;
+}
+
+.sidebar-logo img {
+  height: 40px;
+  font-family: 'Ford', sans-serif;
+ 
+}
+
+.sidebar-logo span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Ford', sans-serif;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.nav-item.active {
+  background: rgba(52, 152, 219, 0.3);
+  border-left: 4px solid #3498db;
+}
+
+.nav-item.danger:hover {
+  background: rgba(231, 76, 60, 0.2);
+}
+
+.nav-icon {
+  font-size: 1.2rem;
+}

@@ -1,0 +1,76 @@
+
+<link href="https://fonts.cdnfonts.com/css/ford" rel="stylesheet">
+
+
+<div class="painel-geral">
+  <app-menu></app-menu>
+  
+
+  <main class="area-de-trabalho">
+    
+
+    <header class="topo-da-pagina">
+      <div class="saudacao">
+        <h1 class="titulo-pagina">Meu Dashboard Ford</h1>
+        <p>Bem-vindo de volta! Aqui estão os dados mais recentes.</p>
+      </div>
+    </header>
+
+
+    <section class="bloco-inicial">
+      <div class="caixa-de-escolha">
+        <h3 class="titulo-caixa">Selecione um Veículo</h3>
+        <select class="lista-modelos" (change)="onChangeSelect($event)">
+          @for (v of veiculos; track v.id) {
+            <option value="{{ v.id }}">{{ v.vehicle }}</option>
+          }
+        </select>
+      </div>
+      
+    
+      <div class="mostrador-dados">
+        <app-card 
+          [titulo]="'Total de Vendas'" 
+          [valor]="veiculoSelecionado.volumetotal"
+          [cor]="'success'">
+        </app-card>
+        
+        <app-card 
+          [titulo]="'Conectados'" 
+          [valor]="veiculoSelecionado.connected"
+          [cor]="'info'">
+        </app-card>
+        
+        <app-card 
+          [titulo]="'Upd. Software'" 
+          [valor]="veiculoSelecionado.softwareUpdates"
+          [cor]="'warning'">
+        </app-card>
+      </div>
+    </section>
+
+    <section class="apresentacao-veiculo">
+      <div class="info-principal-carro">
+        <h2 class="nome-do-modelo">{{ veiculoSelecionado.vehicle }}</h2>
+        <div class="espaco-foto">
+          <img 
+            class="imagem-destaque" 
+            [src]="veiculoSelecionado.img" 
+            [alt]="'Imagem do ' + veiculoSelecionado.vehicle">
+        </div>
+      </div>
+      
+      <div class="area-tabela-info" *ngIf="vinPronto">
+        <app-car-table 
+          [vin]="veiculoSelecionado.vin"
+          [lat]="vinInfos.lat"
+          [long]="vinInfos.long"
+          [odometro]="vinInfos.odometro"
+          [nivelCombustivel]="vinInfos.nivelCombustivel"
+          [status]="vinInfos.status">
+        </app-car-table>
+      </div>
+    </section>
+
+  </main>
+</div>
